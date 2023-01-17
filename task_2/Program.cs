@@ -13,42 +13,42 @@ while (true)
  
     Console.Write("Введите второе число: "); 
     int b=int.Parse(Console.ReadLine()!); 
-        if (a==b) 
+    if (a==b) 
+    { 
+        Console.WriteLine($"Введите неравные числа!!!"); 
+        continue; // Оператор возвращает в начало цикла. 
+    } 
+    else 
+    { 
+        Console.Write("Введите третье число: "); 
+        int c=int.Parse(Console.ReadLine()!); 
+        if ((c==a)^(c==b)) 
         { 
             Console.WriteLine($"Введите неравные числа!!!"); 
-            continue; // Оператор возвращает в начало цикла. 
-        } 
-        else 
-        { 
-            Console.Write("Введите третье число: "); 
-            int c=int.Parse(Console.ReadLine()!); 
-            if ((c==a)^(c==b)) 
-            { 
-                Console.WriteLine($"Введите неравные числа!!!"); 
-                continue; // Оператор возвращает в начало цикла.
+            continue; // Оператор возвращает в начало цикла.
+        }
+        else
+        {
+            if ((a>b)&&(a>c))
+            {
+                Console.WriteLine($"Максимальное число {a}"); 
+                break; 
             }
             else
             {
-                if ((a>b)&(a>c))
-                {
-                    Console.WriteLine($"Максимальное число {a}"); 
+                if (b>c)
+                { 
+                    Console.WriteLine($"Максимальное число {b}"); 
                     break; 
-                }
+                } 
                 else
                 {
-                    if (b>c)
-                    { 
-                        Console.WriteLine($"Максимальное число {b}"); 
-                        break; 
-                    } 
-                    else
-                    {
-                        Console.WriteLine($"Максимальное число {c}");
-                        break;
-                    }
-
+                    Console.WriteLine($"Максимальное число {c}");
+                    break;
                 }
 
             }
-        } 
+
+        }
+    } 
 }    
