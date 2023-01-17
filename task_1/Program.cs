@@ -18,10 +18,12 @@ else
 {
     if (a>b)
     {
-        Console.WriteLine($"Максимальное число {a}");    
+        Console.WriteLine($"Большее число {a}");    
+        Console.WriteLine($"Меньшее число {b}");
     }
     else
     {
-    Console.WriteLine($"Максимальное число {b}");
+        Console.WriteLine($"Большее число {b}");
+        Console.WriteLine($"Меньшее число {a}");
     }
 }
