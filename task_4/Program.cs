@@ -5,6 +5,17 @@
 
 Console.Write("Введите любое число: ");
 int number=int.Parse(Console.ReadLine()!);
+
+//вариант 1
+// int count=2;
+// while (count<=number)
+// {
+//     Console.WriteLine($"{count}");
+//     count+=2;
+// }
+
+//вариант 2
+
 int count=1;
 while (count<=number)
 {
@@ -13,8 +24,5 @@ while (count<=number)
         Console.WriteLine($"{count}");
         count++;
     }
-    else
-    {
-        count++;
-    }
+    count++;
 }
