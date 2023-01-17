@@ -4,48 +4,51 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
-// Console.Write("Введите первое число: ");
-// int a=int.Parse(Console.ReadLine()!);
 
-// Console.Write("Введите второе число: ");
-// int b=int.Parse(Console.ReadLine()!);
 
-// Console.Write("Введите третье число: ");
-// int c=int.Parse(Console.ReadLine()!);
-
-while (true)
-{
-    Console.Write("Введите первое число: ");
-    int a=int.Parse(Console.ReadLine()!);
-
-    Console.Write("Введите второе число: ");
-    int b=int.Parse(Console.ReadLine()!);
-
-    Console.Write("Введите третье число: ");
-    int c=int.Parse(Console.ReadLine()!);
-    
-    if ((a!=b)&(b!=c)&(a!=c))
-    {
-        if ((a>b)&(a>c))
-        {
-            Console.WriteLine($"Максимальное число {a}");
-        }
-        else
-        {
-            if (b>c)
-            {
-                Console.WriteLine($"Максимальное число {b}");
+while (true) 
+{ 
+    Console.Write("Введите первое число: "); 
+    int a=int.Parse(Console.ReadLine()!); 
+ 
+    Console.Write("Введите второе число: "); 
+    int b=int.Parse(Console.ReadLine()!); 
+        if (a==b) 
+        { 
+            Console.WriteLine($"Введите неравные числа!!!"); 
+            continue; // Оператор возвращает в начало цикла. 
+        } 
+        else 
+        { 
+            Console.Write("Введите третье число: "); 
+            int c=int.Parse(Console.ReadLine()!); 
+            if ((c==a)^(c==b)) 
+            { 
+                Console.WriteLine($"Введите неравные числа!!!"); 
+                continue; // Оператор возвращает в начало цикла.
             }
             else
             {
-                Console.WriteLine($"Максимальное число {c}");
+                if ((a>b)&(a>c))
+                {
+                    Console.WriteLine($"Максимальное число {a}"); 
+                    break; 
+                }
+                else
+                {
+                    if (b>c)
+                    { 
+                        Console.WriteLine($"Максимальное число {b}"); 
+                        break; 
+                    } 
+                    else
+                    {
+                        Console.WriteLine($"Максимальное число {c}");
+                        break;
+                    }
+
+                }
+
             }
-        }
-    }
-    else
-    {
-        Console.WriteLine($"Введите неравные числа!!!");
-        continue;   
-    }
-break;
-}
+        } 
+}    
