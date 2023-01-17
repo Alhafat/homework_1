@@ -21,36 +21,31 @@ while (true)
     Console.Write("Введите второе число: ");
     int b=int.Parse(Console.ReadLine()!);
 
-    if (a!=b)
+    Console.Write("Введите третье число: ");
+    int c=int.Parse(Console.ReadLine()!);
+    
+    if ((a!=b)&(b!=c)&(a!=c))
     {
-        Console.Write("Введите третье число: ");
-        int c=int.Parse(Console.ReadLine()!);
+        if ((a>b)&(a>c))
+        {
+            Console.WriteLine($"Максимальное число {a}");
+        }
+        else
+        {
+            if (b>c)
+            {
+                Console.WriteLine($"Максимальное число {b}");
+            }
+            else
+            {
+                Console.WriteLine($"Максимальное число {c}");
+            }
+        }
     }
     else
     {
-        if ((b!=c)&(a!=c))
-            {
-                if ((a>b)&(a>c))
-                {
-                    Console.WriteLine($"Максимальное число {a}");
-                }
-                else
-                {
-                    if (b>c)
-                    {
-                        Console.WriteLine($"Максимальное число {b}");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Максимальное число {c}");
-                    }
-                }
-            }
-        else
-        {
-            Console.WriteLine($"Введите неравные числа!!!");
-            continue;   
-        }
+        Console.WriteLine($"Введите неравные числа!!!");
+        continue;   
     }
 break;
 }
