@@ -13,6 +13,7 @@ int b=int.Parse(Console.ReadLine()!);
 if (a==b)
 {
     Console.WriteLine($"Введи неравные числа!!!");
+    
 }
 else
 {
